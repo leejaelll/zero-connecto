@@ -1,0 +1,15 @@
+%error-base {
+  padding: 5px;
+  cursor: pointer;
+  color: red;
+  background: brown;
+}
+
+.error {
+  @extend %error-base;
+}
+
+.error--seriously {
+  @extend %error-base;
+  font-weight: bold;
+}

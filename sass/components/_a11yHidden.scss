@@ -1,0 +1,11 @@
+@use "../config/";
+
+.a11yHidden {
+  @include config.a11yHidden;
+}
+
+.skipToContnet {
+  [href^="#"] {
+    @include config.a11yHidden(true);
+  }
+}

@@ -1,0 +1,12 @@
+.error--seriously, .error {
+  padding: 5px;
+  cursor: pointer;
+  color: red;
+  background: brown;
+}
+
+.error--seriously {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=demo.css.map */

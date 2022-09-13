@@ -1,0 +1,25 @@
+@mixin a11yHidden($focusable: false) {
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  heigth: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  @if $focusable {
+    overflow: initial;
+    white-space: initial;
+    position: initial;
+    clip: initial;
+    clip-path: initial;
+    width: initial;
+    heigth: initial;
+    margin: initial;
+    border: initial;
+    padding: initial;
+  }
+}
