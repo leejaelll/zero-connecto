@@ -1,6 +1,3 @@
 {
-  "recommendations": [
-    "bradlc.vscode-tailwindcss",
-    "syler.sass-indented"
-  ]
+  "recommendations": ["bradlc.vscode-tailwindcss", "syler.sass-indented"]
 }
