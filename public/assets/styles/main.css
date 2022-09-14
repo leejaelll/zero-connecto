@@ -1,4 +1,7 @@
-body *::before, body *::after, body::before, body::after {
+body *::before,
+body *::after,
+body::before,
+body::after {
   margin: 0;
   border: 0;
   padding: 0;

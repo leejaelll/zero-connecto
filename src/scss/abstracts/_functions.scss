@@ -87,13 +87,36 @@
 // -------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------
-//  list
-@debug meta.type-of(0 auto);
-@debug meta.type-of((Verdana, Arial));
+// Math
+
+@function get-random($n) {
+  @return math.round(math.random() * remove-unit($n));
+}
+
+@debug get-random(10);
+
+@function get-random-min-max($min: 0, $max: 100) {
+  @return get-random($max - $min) + $min;
+}
+// get-random-min-max($max:100) -> 키워드만 호출 가능
+
 // -------------------------------------------------------------------------
-//  map
-@debug meta.type-of(
-  (
-    key1: value,
-  )
-);
+// While
+// $i: 10;
+// @while $i > 0 {
+//   $i: $i - 2;
+//   @debug $i;
+// }
+
+@mixin makeColorUtils($name, $props: color) {
+  // @each $key, $value in $red {
+  //   .#{$red}-#{$key} {
+  //     #{$prop}: $value;
+  //   }
+  // }
+
+  $color-data: map.get($colors, $name);
+  @debug $color-data;
+}
+
+@include makeColorUtils(red);
