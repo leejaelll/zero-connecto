@@ -1,0 +1,17 @@
+// @import "config/variables";
+
+// @import "base/reset";
+// @import "base/base";
+
+// @import "layout/header";
+// @import "layout/footer";
+
+// @import "components/features";
+// @import "components/button";
+
+// -> import 사용 금지 @use 사용
+
+@use "config";
+@use "base";
+@use "components";
+@use "layout";
