@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+:foot {
+  font-size: $base-rem-percentage;
+}
+
+body {
+  @include font();
+  background-color: $white;
+  color: $black;
+}

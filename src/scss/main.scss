@@ -1,0 +1,12 @@
+@use "sass:math";
+@use "base";
+@use "abstracts" as *;
+
+// array vs. object
+// array -> 값의 집합
+// object -> 키와 값 쌍의 집합
+
+// sass map
+// @use "abstracts" as * with (
+//   $bese-rem-size: 16
+// );

@@ -1,0 +1,36 @@
+@use "sass:math";
+@use "sass:map";
+@use "variables/colors" as *;
+
+@function get-color($map, $level) {
+  @return map.get($map, $level);
+}
+
+@function get-red($level) {
+  @return get-color($red, $level);
+}
+@function get-gray($level) {
+  @return get-color($gray, $level);
+}
+@function get-blue($level) {
+  @return get-color($blue, $level);
+}
+@function get-green($level) {
+  @return get-color($green, $level);
+}
+
+@function remove-unit($unit) {
+  @return math.div($unit, $unit * 0 + 1);
+}
+
+@function get-base-rem-size-percentage($base-px-size) {
+  @return math.div(remove-unit($base-px-size), 16) * 100%;
+}
+
+@function rem($unit, $base: 16) {
+  @return math.div(remove-unit($unit), remove-unit($base)) * 1rem;
+}
+
+@function em($unit, $base: 16) {
+  @return math.div(remove-unit($unit), remove-unit($base)) * 1em;
+}
