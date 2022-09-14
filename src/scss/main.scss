@@ -1,12 +1,16 @@
-@use "sass:math";
 @use "base";
 @use "abstracts" as *;
+@use "sass:string";
+
+@debug string.index("hi sass", "hi");
+@debug string.index("hi sass", "scss");
 
 // array vs. object
 // array -> 값의 집합
 // object -> 키와 값 쌍의 집합
-
 // sass map
 // @use "abstracts" as * with (
 //   $bese-rem-size: 16
 // );
+// -------------------------------------------------------------------------
+//  funtion
