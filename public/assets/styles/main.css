@@ -1,20 +1,48 @@
-/* Error: (100: #d4d3d4, 200: #a9a8a9, 300: #7d7c7e, 400: #525153, 500: #272528, 600: #1f1e20, 700: #171618, 800: #100f10, 900: #080708) isn't a valid CSS value.
- *    ,
- * 21 |     } @else if is-map($color-value) {
- *    |                       ^^^^^^^^^^^^
- *    '
- *   src/scss/abstracts/mixins/_colors.scss 21:23  make-color-util()
- *   src/scss/utilities/_colors.scss 4:3           @forward
- *   src/scss/utilities/_index.scss 1:1            @use
- *   src/scss/main.scss 2:1                        root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: (100: #d4d3d4, 200: #a9a8a9, 300: #7d7c7e, 400: #525153, 500: #272528, 600: #1f1e20, 700: #171618, 800: #100f10, 900: #080708) isn't a valid CSS value.\a    \2577 \a 21 \2502      } @else if is-map($color-value) {\a    \2502                        ^^^^^^^^^^^^\a    \2575 \a   src/scss/abstracts/mixins/_colors.scss 21:23  make-color-util()\a   src/scss/utilities/_colors.scss 4:3           @forward\a   src/scss/utilities/_index.scss 1:1            @use\a   src/scss/main.scss 2:1                        root stylesheet";
+body * {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body * {
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font: 1.6rem/1.5 "Open Sans", Dotum, Arial, Verdana, sans-serif;
+  background-color: #5ca0af;
+  color: #ffffff;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background: red;
+}
+.header__logo {
+  background-image: url("/assets/images/icon/FEML.svg");
+  background-repeat: no-repeat;
+}
+
+.header__nav {
+  flex-grow: 1;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+}
+.nav__list--item {
+  padding: 0 20px;
+}
+.nav__list--item a {
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */

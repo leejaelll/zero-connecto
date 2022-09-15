@@ -1,5 +1,5 @@
 @use "../abstracts" as *;
 
-@each $key, $value in $colors {
-  @include make-color-util($key);
-}
+// @each $key, $value in $colors {
+//   @include make-color-util($key);
+// }

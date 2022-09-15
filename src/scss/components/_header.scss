@@ -1,0 +1,13 @@
+@use "../base" as *;
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background: red;
+
+  &__logo {
+    background-image: url("/assets/images/icon/FEML.svg");
+    background-repeat: no-repeat;
+  }
+}

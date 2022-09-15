@@ -6,6 +6,6 @@
 
 body {
   @include font();
-  background-color: $white;
-  color: $black;
+  background-color: get-color($blue, 500);
+  color: $white;
 }

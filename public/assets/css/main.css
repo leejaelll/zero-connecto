@@ -1,0 +1,10 @@
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+    "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: (100: #d4d3d4, 200: #a9a8a9, 300: #7d7c7e, 400: #525153, 500: #272528, 600: #1f1e20, 700: #171618, 800: #100f10, 900: #080708) isn't a valid CSS value.\a    \2577 \a 21 \2502      } @else if is-map($color-value) {\a    \2502                        ^^^^^^^^^^^^\a    \2575 \a   src/scss/abstracts/mixins/_colors.scss 21:23  make-color-util()\a   src/scss/utilities/_colors.scss 4:3           @forward\a   src/scss/utilities/_index.scss 1:1            @use\a   src/scss/main.scss 2:1                        root stylesheet";
+}

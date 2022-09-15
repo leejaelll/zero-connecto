@@ -1,0 +1,18 @@
+.header__nav {
+  flex-grow: 1;
+}
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    &--item {
+      padding: 0 20px;
+    }
+
+    &--item a {
+      display: block;
+    }
+  }
+}
