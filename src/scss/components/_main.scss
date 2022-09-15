@@ -1,0 +1,25 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.a11yHidden {
+  @extend %a11yHidden;
+}
+
+.main {
+  margin-top: em(30px);
+  &__section {
+    &__wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      padding: em(100px);
+
+      img {
+        width: 50%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

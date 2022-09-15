@@ -9,9 +9,15 @@
   list-style: none;
 }
 
+%reset-link-model {
+  color: inherit;
+  text-decoration-line: none;
+}
+
 body * {
   @extend %reset-box-model;
   @extend %reset-list-model;
+  @extend %reset-link-model;
 }
 
 %a11yHidden {
