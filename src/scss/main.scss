@@ -12,3 +12,8 @@
 // @use "abstracts" as * with (
 //   $bese-rem-size: 16
 // );
+
+@each $key, $value in $colors {
+  //   @debug $key, $value;
+  @include makeColorUtils($key);
+}

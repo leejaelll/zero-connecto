@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "../variables/typography" as *;
 
 @mixin font(
   $size: $base-font-size,
@@ -6,11 +6,6 @@
   $family: $font-family
 ) {
   font: #{$size}/#{$leading} $family;
-}
-
-@mixin colors($forground: null, $background: null) {
-  background: $background;
-  color: $forground;
 }
 
 @mixin size($width, $height: $width, $min-or-max: "") {

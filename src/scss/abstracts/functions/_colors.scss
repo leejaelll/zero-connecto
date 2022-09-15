@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "../variables/colors" as *;
+@use "types" as *;
+
+@function get-color($map, $level) {
+  @return map.get($map, $level);
+}
+
+@function get-red($level) {
+  @return get-color($red, $level);
+}
+@function get-gray($level) {
+  @return get-color($gray, $level);
+}
+@function get-blue($level) {
+  @return get-color($blue, $level);
+}
+@function get-green($level) {
+  @return get-color($green, $level);
+}
+
+@mixin makeColorUtils($name) {
+  $color-value: map.get($colors, $name);
+
+  $prefixes: "text", "bg";
+  $name: #{$name}; // type: color -> string;
+
+  @each $prefix in $prefixes {
+    $prop: if($prefix == "text", "color", "background-color");
+
+    @if is-color($color-value) {
+      // 값이 하나인 경우
+      .#{$prefix}-#{$name} {
+        #{$prop}: $color-value;
+      }
+    } @else {
+      @each $variant, $value in $color-value {
+        .#{$prefix}-#{$name}-#{$variant} {
+          #{$prop}: $value;
+        }
+      }
+    }
+  }
+
+  // .prefix-colorName {color | background-color : value }
+  // .prefix-colorName-variants {color | background-color : value }
+}

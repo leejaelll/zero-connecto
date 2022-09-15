@@ -1,0 +1,27 @@
+@use "sass:meta";
+
+@function is-type($data) {
+  @return meta.type-of($data);
+}
+@function fn() {
+  @return null;
+}
+@function is-function($function-name) {
+  @return is-type(meta.get-function($function-name));
+}
+
+@function is-number($data) {
+  @return is-type($data) == "number";
+}
+
+@function is-string($data) {
+  @return is-type($data) == "string";
+}
+
+@function is-bool($data) {
+  @return is-type($data) == "bool";
+}
+
+@function is-color($data) {
+  @return is-type($data) == "color";
+}
