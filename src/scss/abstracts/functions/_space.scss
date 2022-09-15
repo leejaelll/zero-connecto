@@ -1,0 +1,28 @@
+@use "sass:math";
+@use "units" as *;
+
+@use "../variables/spacing" as *;
+
+// spacing
+@function spacing($number1) {
+  @return unitless-px($number1 * $base-spacing);
+}
+
+// padding mixin
+@mixin p($value) {
+  @if (has-unit($value)) {
+    padding: remove-unit($value) * $base-spacing;
+  } @else {
+    padding: $value * $base-spacing;
+  }
+}
+
+@mixin px($value) {
+  @if (has-unit($value)) {
+    padding-left: remove-unit($value) * $base-spacing;
+    padding-right: remove-unit($value) * $base-spacing;
+  } @else {
+    padding-left: $value * $base-spacing;
+    padding-right: $value * $base-spacing;
+  }
+}

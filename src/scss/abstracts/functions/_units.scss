@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 @function get-base-rem-size-percentage($base-px-size) {
   @return math.div(remove-unit($base-px-size), 16) * 100%;
@@ -17,9 +17,18 @@
 }
 
 @function has-unit($value) {
-  @return get-unit($value) != '';
+  @return get-unit($value) != "";
 }
 
 @function remove-unit($unit) {
   @return math.div($unit, $unit * 0 + 1);
+}
+
+// px을 붙여주는 함수
+@function unitless-px($value) {
+  @return if(
+    math.is-unitless($value),
+    if($value != 0, $value * 1px, $value),
+    $value
+  );
 }

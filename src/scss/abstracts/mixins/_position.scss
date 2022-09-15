@@ -1,0 +1,43 @@
+@use "../functions/" as *;
+
+@mixin get-match-value-of-props($props, $prop-list) {
+  @each $key in $prop-list {
+    $key-index: list.index($props, $key);
+    @if is-number($key-index) {
+      $prop: list.nth($props, $key-index);
+      @if string.length($prop) == 1 {
+        $prop: get-prop-name($prop);
+      }
+      $value: list.nth($props, $key-index + 1);
+      #{$prop}: $value;
+    }
+  }
+}
+
+@mixin position($type, $props: null) {
+  position: $type;
+  @if (is-map($props)) {
+    @include get-match-value-of-props($props, z-index z);
+    @include get-match-value-of-props($props, top t);
+    @include get-match-value-of-props($props, right r);
+    @include get-match-value-of-props($props, bottom b);
+    @include get-match-value-of-props($props, left l);
+  }
+}
+// input: position(absolute, t 10 b 20)
+
+@mixin relative($props: null) {
+  @include position(relative, $props);
+}
+
+@mixin absolute($props: null) {
+  @include position(absolute, $props);
+}
+
+@mixin fixed($props: null) {
+  @include position(fixed, $props);
+}
+
+@mixin sticky($props: null) {
+  @include position(sticky, $props);
+}
